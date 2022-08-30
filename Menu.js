@@ -27,7 +27,7 @@ while(correctOrder != 'y'){
         }
         
     }
-    console.log("Your order is: " + orderList);
+    console.log("Your order is: ");
     console.log('');
     console.log("Count id Dish Price");
     var DistinctList = Array.from(new Set(orderList));
@@ -39,7 +39,8 @@ while(correctOrder != 'y'){
                 Counter++;
             }
         }
-        console.log(Counter + ' ' + uniqueId + ' ' + menu[idList.indexOf(uniqueId)].Dish+ ' ' + menu[idList.indexOf(uniqueId)].Price*Counter)
+        var dishPrice = menu[idList.indexOf(uniqueId)].Price*Counter; 
+        console.log(Counter + ' ' + uniqueId + ' ' + menu[idList.indexOf(uniqueId)].Dish+ ' ' + dishPrice.toFixed(2))
     });
     console.log('');
 
